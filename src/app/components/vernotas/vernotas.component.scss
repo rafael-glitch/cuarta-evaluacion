@@ -1,0 +1,23 @@
+.Abierto{
+    float: left;
+    background-color: yellow;
+    border : 1px solid ;
+    
+}
+.Proceso{
+    border: 1px solid;
+    float: center;
+    background-color: cyan;
+    margin-left: 500px;
+    margin-right: 500px;
+   
+}
+.Cerrado{
+    
+    float: right;
+    color: white;
+    background-color:black;
+}
+ul li{
+    list-style-type: none;
+}

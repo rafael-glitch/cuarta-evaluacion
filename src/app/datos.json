@@ -1,0 +1,17 @@
+[{
+    "estado":"abierto",
+    "titulo":"Nota Verde",
+    "descripcion":"y esa fue mi nota verde, soy Juan Carlos Bodoque"
+
+},
+{
+    "estado":"proceso",
+    "titulo":"El libro verde de color rojo",
+    "descripcion":"Un libro que su portada es roja pero se llama verde"
+},
+{
+    "estado":"cerrado",
+    "titulo":"El libro rojo de color verde",
+    "descripcion":"Un libro que su portada es verde pero se llama rojo"
+
+}]

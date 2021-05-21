@@ -1,0 +1,28 @@
+<a [routerLink]="['/vernotas']" routerLinkActive="router-link-active"><button>Ver notas</button></a>
+<form [formGroup]="formulario" (ngSubmit)="EnviarDatos()">
+    <ul>
+        <li>
+            <label for="titulo">Titulo:</label>
+            <br>
+            <input type="text" formControlName="titulo">
+        </li>
+        <li>
+            <label for="estado">Estado:</label>
+            <br>
+            <select formControlName="estado" id="estado">
+             
+                <option >abierto</option>
+                <option >proceso</option>
+                <option >cerrado</option>
+            </select> 
+        </li>
+        <li>
+            <label for="descripcion">Descripcion:</label>
+            <br>
+            <textarea formControlName="descripcion"   id='descripcion' > </textarea>    
+        </li>
+        
+       
+            <button  type="submit">EnviarDatos</button>
+    </ul>
+</form>

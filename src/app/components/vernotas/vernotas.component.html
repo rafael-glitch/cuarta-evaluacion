@@ -1,0 +1,48 @@
+<a [routerLink]="['']" routerLinkActive="router-link-active"><button>hacer notas</button></a>
+<ul>
+  <li *ngFor="let nota of ListNota">
+  <div  *ngIf="nota.estado =='abierto'">
+    <ul>
+      <li class="Abierto">
+        {{nota.titulo}}
+        <br>
+        <br>
+        {{nota.descripcion}}
+        <br>
+      </li>
+      <br>
+    </ul>
+  </div>
+  <br>
+  <div  *ngIf="nota.estado =='proceso'"> 
+    <ul>
+      <li class="Proceso">
+        {{nota.titulo}}
+        <br>
+        <br>
+        {{nota.descripcion}}
+        <br>
+      </li>
+      <br>
+    </ul>
+    
+  </div>
+  <br>
+  <div  *ngIf="nota.estado =='cerrado'"> 
+    <ul>
+      <li class="Cerrado">
+        {{nota.titulo}}
+        <br>
+        <br>
+        {{nota.descripcion}}
+        <br>
+      </li>
+      <br>
+    </ul>
+    
+  </div>
+  <br>
+ 
+  
+  </li>
+</ul>  
