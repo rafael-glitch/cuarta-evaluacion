@@ -15,7 +15,7 @@ export class NotaComponent implements OnInit {
     this.formulario=this.fb.group({
       titulo:['',[Validators.required]],
       estado:['',[Validators.required]],
-      descripcion:['',[Validators.required]]
+      descripcion:['',[Validators.required,Validators.maxLength(150)]]
     });
    }
 

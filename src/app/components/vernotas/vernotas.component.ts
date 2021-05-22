@@ -9,6 +9,7 @@ import { N0tasService } from '../../n0tas.service'
 export class VernotasComponent implements OnInit {
   ListNota: Array<NOTAS>=[];
   constructor(private servisio: N0tasService) { }
+  
 
   ngOnInit(): void {
     this.servisio.catchNota().subscribe((gatos: string | any[])=>{
@@ -16,7 +17,16 @@ export class VernotasComponent implements OnInit {
         this.ListNota.push(gatos[i]);
       }
     })
-    
-  }
 
+  }
+  Eliminar(eliminable: NOTAS){
+    
+    this.servisio.deleteNota(eliminable).subscribe((gatos) => {
+      console.log("1",gatos);  
+  
+    })
+   window.location.reload();
+  }
+  
 }
+

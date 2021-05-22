@@ -1,48 +1,69 @@
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <a [routerLink]="['']" routerLinkActive="router-link-active"><button>hacer notas</button></a>
 <ul>
-  <li *ngFor="let nota of ListNota">
-  <div  *ngIf="nota.estado =='abierto'">
-    <ul>
-      <li class="Abierto">
-        {{nota.titulo}}
-        <br>
-        <br>
-        {{nota.descripcion}}
+   
+<div class="container-fluid">
+
+  <div class="row">
+    <div class="col-sm-4" style="background-color:lavender;">
+      <p>ABIERTO</p>
+      <li *ngFor="let nota of ListNota">
+       
+        <div  *ngIf="nota.estado =='abierto'">
+          
+            <li class="Abierto">
+             {{nota.titulo}}
+            
+              <br>
+              <br>
+              {{nota.descripcion}}
+              <br>
+              <button class="btneliminar" (click)= "Eliminar(nota)"><span class="material-icons">delete</span></button>
+              
+            </li>
+          
+          
+       </div>
+       <br>
+      </li>
+      
+    </div>
+    <div class="col-sm-4" style="background-color:lavenderblush;">
+      <p>PROCESO</p>
+      <li *ngFor="let nota of ListNota">
+        <div  *ngIf="nota.estado =='proceso'"> 
+            <li class="Proceso">
+              {{nota.titulo}}
+              <br>
+              <br>
+              {{nota.descripcion}}
+              
+            </li>
+            
+          </div>
+          <br>
+      </li>
+      
+    </div>
+    <div class="col-sm-4" style="background-color:lavender;">
+      <p>CERRADO</p>
+      <li *ngFor="let nota of ListNota">
+        <div  *ngIf="nota.estado =='cerrado'"> 
+            <li class="Cerrado">
+              {{nota.titulo}}
+              <br>
+              <br>
+              {{nota.descripcion}}
+              
+            </li>
+            
+        </div>
         <br>
       </li>
-      <br>
-    </ul>
+        
+    </div>
   </div>
-  <br>
-  <div  *ngIf="nota.estado =='proceso'"> 
-    <ul>
-      <li class="Proceso">
-        {{nota.titulo}}
-        <br>
-        <br>
-        {{nota.descripcion}}
-        <br>
-      </li>
-      <br>
-    </ul>
-    
-  </div>
-  <br>
-  <div  *ngIf="nota.estado =='cerrado'"> 
-    <ul>
-      <li class="Cerrado">
-        {{nota.titulo}}
-        <br>
-        <br>
-        {{nota.descripcion}}
-        <br>
-      </li>
-      <br>
-    </ul>
-    
-  </div>
-  <br>
- 
-  
-  </li>
-</ul>  
+</div>
+</ul>
